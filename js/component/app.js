@@ -1,21 +1,17 @@
 import html from "../core.js";
-import { connect } from "../store.js";
 
-const connector = connect(state => ({
-    title: 'REACT',
-    cars: state.cars
-  })
-);
+import Header from "../component/Header.js";
+import TodoList from "./TodoList.js";
+import Footer from "../component/Footer.js";
 
-function App(props) {
-  console.log(props);
-  return html`
-    <h1>${props.title}</h1>
-    <ul>
-      ${props.cars.map(car => `<li>${car}</li>`)}
-    </ul>
-    <button onclick="dispatch('ADD', 'Rorche');">Add car</button>
+function App() {
+  return html/*html*/`
+    <section class="todoapp">
+      ${Header()}
+      ${TodoList()}
+      ${Footer()}
+    </section>
   `;
 }
 
-export default connector(App);
+export default App;
