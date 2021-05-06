@@ -1,19 +1,13 @@
+import storage from "./untils/storage.js";
+
 const init = {
-  todos: [
-    {
-      title: 'Learn HTML, CSS',
-      completed: true
-    },
-    {
-      title: 'Learn Javascript',
-      completed: false
-    }
-  ]
+  todos: storage.get(storage.keys.TODOS_STORAGE_KEY)
 }
 
 const actions = {
   add({ todos }, title) {
     todos.push({ title, completed: false });
+    storage.set(storage.keys.TODOS_STORAGE_KEY, todos);
   }
 }
 

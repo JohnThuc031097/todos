@@ -1,7 +1,7 @@
 import html from "../core.js";
 import { connect } from "../store.js";
 
-import TodoItem from "./TodoItem.js.js";
+import TodoItem from "./TodoItem.js";
 
 let connector = connect();
 
