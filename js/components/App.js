@@ -1,8 +1,8 @@
 import html from "../core.js";
 
-import Header from "../component/Header.js";
+import Header from "./Header.js";
 import TodoList from "./TodoList.js";
-import Footer from "../component/Footer.js";
+import Footer from "./Footer.js";
 
 function App() {
   return html/*html*/`

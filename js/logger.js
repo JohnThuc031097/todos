@@ -1,5 +1,4 @@
 export default function logger(reducer) {
-  console.log(reducer);
   return (preState, action, args) => {
     console.group(action);
 
@@ -9,6 +8,6 @@ export default function logger(reducer) {
     console.log('Next State:', nextState);
 
     console.groupEnd();
-    // return nextState;
+    return nextState;
   };
 };
